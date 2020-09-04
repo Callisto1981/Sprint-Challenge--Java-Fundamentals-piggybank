@@ -12,19 +12,20 @@ public class Coin
     private long coinid;
     private String name;
     private String nameplural;
-    private int value;
+    private double value;
     private int quantity;
 
-    public Coin()
-    {
-    }
 
-    public Coin(String name, String nameplural, int value, int quantity)
+    public Coin(String name, String nameplural, double value, int quantity)
     {
         this.name = name;
         this.nameplural = nameplural;
         this.value = value;
         this.quantity = quantity;
+    }
+
+    public Coin()
+    {
     }
 
     public long getCoinid()
@@ -57,7 +58,7 @@ public class Coin
         this.nameplural = nameplural;
     }
 
-    public int getValue()
+    public double getValue()
     {
         return value;
     }
@@ -75,5 +76,17 @@ public class Coin
     public void setQuantity(int quantity)
     {
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Coin{" +
+            "coinid=" + coinid +
+            ", name='" + name + '\'' +
+            ", nameplural='" + nameplural + '\'' +
+            ", value=" + value +
+            ", quantity=" + quantity +
+            '}';
     }
 }
